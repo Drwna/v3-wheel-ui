@@ -1,3 +1,7 @@
 <template>
-  <div>switch demo</div>
+  <div>
+    switch demo
+    <p>switch</p>
+    <p>switch</p>
+  </div>
 </template>
