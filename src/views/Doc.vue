@@ -12,10 +12,10 @@
             <router-link to="/doc/button">Button 组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/button">Dialog 组件</router-link>
+            <router-link to="/doc/dialog">Dialog 组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/tab">Tabs 组件</router-link>
+            <router-link to="/doc/tabs">Tabs 组件</router-link>
           </li>
         </ol>
       </aside>
@@ -51,8 +51,7 @@ export default {
     padding-top: 60px;
     padding-left: 156px;
     @media (max-width: 500px) {
-      padding-left: 0;
-      padding-top: 0;
+      padding-left: 0; 
     }
   }
 }
@@ -86,6 +85,6 @@ aside {
   }
 }
 main {
-  overflow: hidden;
+  overflow: auto;
 }
 </style>
