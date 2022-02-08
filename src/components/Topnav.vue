@@ -6,8 +6,28 @@
       <li>菜单2</li>
     </ul>
     <span class="toggleAside">
-      
-    </span>
+       <svg
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        focusable="false"
+        viewBox="0 0 24 24"
+        class="menu-icon"
+        data-v-0d06e654=""
+      >
+        <path
+          d="M17,11H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h14c0.6,0,1,0.4,1,1S17.6,11,17,11z"
+        ></path>
+        <path
+          d="M21,7H3C2.4,7,2,6.6,2,6s0.4-1,1-1h18c0.6,0,1,0.4,1,1S21.6,7,21,7z"
+        ></path>
+        <path
+          d="M21,15H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h18c0.6,0,1,0.4,1,1S21.6,15,21,15z"
+        ></path>
+        <path
+          d="M17,19H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h14c0.6,0,1,0.4,1,1S17.6,19,17,19z"
+        ></path>
+      </svg>
+       </span>
   </div>
 </template>
 
@@ -44,6 +64,15 @@ export default {
     > li {
       margin: 0 1em;
     }
+  }
+  > .toggleAside {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
   }
   @media (max-width: 500px) {
     > .menu {
