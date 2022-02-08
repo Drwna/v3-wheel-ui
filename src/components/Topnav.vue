@@ -1,12 +1,12 @@
 <template>
   <div class="topnav">
-    <div class="logo" @click="toggleAside">LOGO</div>
+    <div class="logo">LOGO</div>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
     </ul>
-    <span class="toggleAside">
-       <svg
+    <span class="toggleAside" @click="toggleAside">
+      <svg
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
         focusable="false"
@@ -27,7 +27,7 @@
           d="M17,19H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h14c0.6,0,1,0.4,1,1S17.6,19,17,19z"
         ></path>
       </svg>
-       </span>
+    </span>
   </div>
 </template>
 
@@ -66,13 +66,13 @@ export default {
     }
   }
   > .toggleAside {
-    display: inline-block;
     width: 24px;
     height: 24px;
     position: absolute;
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
+    display: none;
   }
   @media (max-width: 500px) {
     > .menu {
@@ -80,6 +80,9 @@ export default {
     }
     > .logo {
       margin: 0 auto;
+    }
+    > .toggleAside {
+      display: inline-block;
     }
   }
 }
