@@ -1,5 +1,4 @@
 <template>
-  <div>Button 示例</div>
   <h1>示例1</h1>
   <div class="example">
     <Button>hello</Button>
@@ -25,6 +24,24 @@
       <Button theme="text" size="small">小小小按钮</Button>
     </div>
   </div>
+  <h1>示例3</h1>
+  <div>
+    <div class="example">
+      <Button level="main">主要按钮</Button>
+      <Button>普通按钮</Button>
+      <Button level="danger">危险按钮</Button>
+    </div>
+    <div class="example">
+      <Button theme="link" level="main">主要链接按钮</Button>
+      <Button theme="link">普通链接按钮</Button>
+      <Button theme="link" level="danger">危险链接按钮</Button>
+    </div>
+    <div class="example">
+      <Button theme="text" level="main">主要文字按钮</Button>
+      <Button theme="text">普通文字按钮</Button>
+      <Button theme="text" level="danger">危险文字按钮</Button>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -42,7 +59,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .example {
-  height: 90px;
+  height: 80px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
