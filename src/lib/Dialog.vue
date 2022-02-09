@@ -46,9 +46,7 @@ export default {
       context.emit('update:visible', false);
     };
     const onClickOverlay = () => {
-      if (props.closeOnClickOverlay) {
-        close();
-      }
+      if (props.closeOnClickOverlay) close();
     };
     const ok = () => {
       if (props.ok?.() !== false) {
@@ -57,6 +55,7 @@ export default {
       }
     };
     const cancel = () => {
+      props.cancel?.();
       context.emit('cancel');
       close();
     };
