@@ -9,19 +9,19 @@
   <h1>示例2</h1>
   <div>
     <div class="example">
-      <Button size="big">大大大按钮</Button>
+      <Button size="big">大按钮</Button>
       <Button>默认按钮</Button>
-      <Button size="small">小小小按钮</Button>
+      <Button size="small">小按钮</Button>
     </div>
     <div class="example">
-      <Button theme="link" size="big">大大大按钮</Button>
+      <Button theme="link" size="big">大按钮</Button>
       <Button theme="link">默认按钮</Button>
-      <Button theme="link" size="small">小小小按钮</Button>
+      <Button theme="link" size="small">小按钮</Button>
     </div>
     <div class="example">
-      <Button size="big" theme="text">大大大按钮</Button>
+      <Button size="big" theme="text">大按钮</Button>
       <Button theme="text">默认按钮</Button>
-      <Button theme="text" size="small">小小小按钮</Button>
+      <Button theme="text" size="small">小按钮</Button>
     </div>
   </div>
   <h1>示例3</h1>
