@@ -3,10 +3,11 @@
     <div class="wheel-dialog-overlay" @click="onClickOverlay"></div>
     <div class="wheel-dialog-wrapper">
       <div class="wheel-dialog">
-        <header>标题 <span @click="close" class="wheel-dialog-close"></span></header>
+        <header>
+          <slot name="title"/>
+          <span @click="close" class="wheel-dialog-close"></span></header>
         <main>
-          <p>第一行字</p>
-          <p>第二行字</p>
+          <slot name="content"/>
         </main>
         <footer>
           <Button level="main" @click="ok">OK</Button>
