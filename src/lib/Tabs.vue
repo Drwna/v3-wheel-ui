@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="wheel-tabs">
-      <div class="wheel-tabs-nav">
+      <div ref="container" class="wheel-tabs-nav">
         <div class="wheel-tabs-nav-item"
              v-for="(t,index) in titles" :key="index"
              :ref="el =>{if(el) navItems[index] = el}"
@@ -22,7 +22,7 @@
 
 <script lang="ts">
 import Tab from '../lib/Tab.vue';
-import {computed, onMounted, ref} from 'vue';
+import {computed, onMounted, onUpdated, ref} from 'vue';
 
 export default {
   props: {
@@ -33,12 +33,20 @@ export default {
   setup(props, context) {
     const navItems = ref<HTMLDivElement[]>([]);
     const indicator = ref<HTMLDivElement>(null);
-    onMounted(() => {
+    const container = ref<HTMLDivElement>(null);
+    const x = () => {
       const divs = navItems.value;
       const result = divs.filter(div => div.classList.contains('selected'))[0];
       const {width} = result.getBoundingClientRect();
       indicator.value.style.width = width + 'px';
-    });
+      const {left: left1} = container.value.getBoundingClientRect();
+      const {left: left2} = result.getBoundingClientRect();
+      const left = left2 - left1;
+      indicator.value.style.left = left + 'px';
+    };
+    // 只在第一次渲染执行
+    onMounted(x);
+    onUpdated(x);
     const defaults = context.slots.default();
     defaults.forEach(tag => {
       if (tag.type !== Tab) {
@@ -56,7 +64,7 @@ export default {
     const select = (title: string) => {
       context.emit('update:selected', title);
     };
-    return {defaults, titles, current, select, navItems, indicator};
+    return {defaults, titles, current, select, navItems, indicator, container};
   }
 };
 </script>
@@ -90,6 +98,7 @@ $border-color: #d9d9d9;
       left: 0;
       bottom: -1px;
       width: 100px;
+      transition: all 250ms;
     }
   }
   &-content {
