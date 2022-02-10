@@ -61,6 +61,11 @@ $border-radius: 4px;
 .features {
   margin: 64px auto;
   width: 400px;
+  @media (max-width: 500px) {
+    width: 100%;
+    margin: auto;
+    transform: scale(0.75);
+  }
   @media (min-width: 800px) {
     width: 800px;
   }
