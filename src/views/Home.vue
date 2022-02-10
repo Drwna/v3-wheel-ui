@@ -21,11 +21,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$green: #53bd95;
+$border-radius: 4px;
 .topnavAndBanner {
-  background: radial-gradient(circle, rgba(250, 249, 255, 1) 0%, rgba(226, 239, 247, 1) 100%);
+  //background: radial-gradient(circle, rgba(250, 249, 255, 1) 0%, rgba(226, 239, 247, 1) 100%);
+  background: linear-gradient(330deg, rgba(205, 227, 241, 1) 0%, rgba(250, 249, 255, 1) 47%, rgba(220, 247, 247, 1) 100%);
 }
 
 .banner {
+  color: #209468;
   padding: 100px 0;
   display: flex;
   justify-content: center;
@@ -35,13 +39,14 @@ export default {
     padding: 8px 0;
     a {
       margin: 0 8px;
-      background: #fff;
+      background: $green;
+      color: white;
       display: inline-block;
-      $h: 28px;
-      height: $h;
-      line-height: $h;
-      border-radius: $h/2;
-      padding: 0 8px;
+      padding: 8px 24px;
+      border-radius: $border-radius;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 }
