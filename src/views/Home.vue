@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <Topnav />
+  <div class="topnavAndBanner">
+    <Topnav/>
     <div class="banner">
       <h1>Wheel UI</h1>
       <h2>一个厉害的 UI 框架</h2>
@@ -13,20 +13,24 @@
 </template>
 
 <script lang="ts">
-import Topnav from "../components/Topnav.vue";
+import Topnav from '../components/Topnav.vue';
+
 export default {
-  components: { Topnav },
+  components: {Topnav},
 };
 </script>
 
 <style lang="scss" scoped>
+.topnavAndBanner {
+  background: radial-gradient(circle, rgba(250, 249, 255, 1) 0%, rgba(226, 239, 247, 1) 100%);
+}
+
 .banner {
   padding: 100px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: lightgreen;
   > .actions {
     padding: 8px 0;
     a {
