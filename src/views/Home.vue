@@ -39,6 +39,9 @@ $border-radius: 4px;
 .topnavAndBanner {
   //background: radial-gradient(circle, rgba(250, 249, 255, 1) 0%, rgba(226, 239, 247, 1) 100%);
   background: linear-gradient(330deg, rgba(205, 227, 241, 1) 0%, rgba(250, 249, 255, 1) 47%, rgba(220, 247, 247, 1) 100%);
+  //border-bottom-left-radius: 50% 40px;
+  //border-bottom-right-radius: 50% 40px;
+  clip-path: ellipse(80% 60% at 50% 40%);
 }
 
 .features {
