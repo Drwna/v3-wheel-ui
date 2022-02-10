@@ -1,21 +1,19 @@
 <template>
-  <div>
-    <div class="wheel-tabs">
-      <div ref="container" class="wheel-tabs-nav">
-        <div class="wheel-tabs-nav-item"
-             v-for="(t,index) in titles" :key="index"
-             :ref="el =>{if(el) navItems[index] = el}"
-             @click="select(t)"
-             :class="{selected:t ===selected}"
-        >{{ t }}
-        </div>
-        <div ref="indicator" class="wheel-tabs-nav-indicator"></div>
+  <div class="wheel-tabs">
+    <div class="wheel-tabs-nav" ref="container">
+      <div class="wheel-tabs-nav-item"
+           v-for="(t,index) in titles" :key="index"
+           :ref="el => { if (t===selected) selectedItem = el }"
+           @click="select(t)"
+           :class="{selected: t=== selected}"
+      >{{ t }}
       </div>
-      <div class="wheel-tabs-content">
-        <component class="wheel-tabs-content-item"
-                   v-for="c in defaults" :is="c" :key="c"
-                   :class="{selected:c.props.title ===selected}"/>
-      </div>
+      <div class="wheel-tabs-nav-indicator" ref="indicator"></div>
+    </div>
+    <div class="wheel-tabs-content">
+      <component class="wheel-tabs-content-item"
+                 v-for="c in defaults"
+                 :class="{selected: c.props.title === selected }" :is="c"/>
     </div>
   </div>
 </template>
@@ -31,16 +29,14 @@ export default {
     }
   },
   setup(props, context) {
-    const navItems = ref<HTMLDivElement[]>([]);
+    const selectedItem = ref<HTMLDivElement>(null);
     const indicator = ref<HTMLDivElement>(null);
     const container = ref<HTMLDivElement>(null);
     const x = () => {
-      const divs = navItems.value;
-      const result = divs.filter(div => div.classList.contains('selected'))[0];
-      const {width} = result.getBoundingClientRect();
+      const {width} = selectedItem.value.getBoundingClientRect();
       indicator.value.style.width = width + 'px';
       const {left: left1} = container.value.getBoundingClientRect();
-      const {left: left2} = result.getBoundingClientRect();
+      const {left: left2} = selectedItem.value.getBoundingClientRect();
       const left = left2 - left1;
       indicator.value.style.left = left + 'px';
     };
@@ -64,7 +60,7 @@ export default {
     const select = (title: string) => {
       context.emit('update:selected', title);
     };
-    return {defaults, titles, current, select, navItems, indicator, container};
+    return {defaults, titles, current, select, selectedItem, indicator, container};
   }
 };
 </script>
