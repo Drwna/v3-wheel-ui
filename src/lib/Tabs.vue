@@ -2,10 +2,17 @@
   <div>
     <div class="wheel-tabs">
       <div class="wheel-tabs-nav">
-        <div class="wheel-tabs-nav-item" v-for="(t,index) in titles" :key="index">{{ t }}</div>
+        <div class="wheel-tabs-nav-item"
+             v-for="(t,index) in titles" :key="index"
+             @click="select(t)"
+             :class="{selected:t ===selected}"
+        >{{ t }}
+        </div>
       </div>
       <div class="wheel-tabs-content">
-        <component class="wheel-tabs-content-item" v-for="(c,index) in defaults" :is="c" :key="index"/>
+        <component class="wheel-tabs-content-item"
+                   v-for="c in defaults" :is="c" :key="c"
+                   :class="{selected:c.props.title ===selected}"/>
       </div>
     </div>
   </div>
@@ -13,8 +20,14 @@
 
 <script lang="ts">
 import Tab from '../lib/Tab.vue';
+import {computed} from 'vue';
 
 export default {
+  props: {
+    selected: {
+      type: String
+    }
+  },
   setup(props, context) {
     const defaults = context.slots.default();
     defaults.forEach(tag => {
@@ -22,8 +35,18 @@ export default {
         throw new Error('Tabs 子标签必须是 Tab');
       }
     });
-    const titles = defaults.map(tag => tag.props.title);
-    return {titles, defaults};
+    const current = computed(() => {
+      return defaults.filter((tag) => {
+        return tag.props.title === props.selected;
+      })[0];
+    });
+    const titles = defaults.map((tag) => {
+      return tag.props.title;
+    });
+    const select = (title: string) => {
+      context.emit('update:selected', title);
+    };
+    return {defaults, titles, current, select};
   }
 };
 </script>
@@ -52,6 +75,12 @@ $border-color: #d9d9d9;
   }
   &-content {
     padding: 8px 0;
+    &-item {
+      display: none;
+      &.selected {
+        display: block;
+      }
+    }
   }
 }
 </style>
