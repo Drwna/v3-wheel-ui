@@ -4,11 +4,12 @@
       <div class="wheel-tabs-nav">
         <div class="wheel-tabs-nav-item"
              v-for="(t,index) in titles" :key="index"
+             :ref="el =>{if(el) navItems[index] = el}"
              @click="select(t)"
              :class="{selected:t ===selected}"
         >{{ t }}
         </div>
-        <div class="wheel-tabs-nav-indicator"></div>
+        <div ref="indicator" class="wheel-tabs-nav-indicator"></div>
       </div>
       <div class="wheel-tabs-content">
         <component class="wheel-tabs-content-item"
@@ -21,7 +22,7 @@
 
 <script lang="ts">
 import Tab from '../lib/Tab.vue';
-import {computed} from 'vue';
+import {computed, onMounted, ref} from 'vue';
 
 export default {
   props: {
@@ -30,6 +31,14 @@ export default {
     }
   },
   setup(props, context) {
+    const navItems = ref<HTMLDivElement[]>([]);
+    const indicator = ref<HTMLDivElement>(null);
+    onMounted(() => {
+      const divs = navItems.value;
+      const result = divs.filter(div => div.classList.contains('selected'))[0];
+      const {width} = result.getBoundingClientRect();
+      indicator.value.style.width = width + 'px';
+    });
     const defaults = context.slots.default();
     defaults.forEach(tag => {
       if (tag.type !== Tab) {
@@ -47,7 +56,7 @@ export default {
     const select = (title: string) => {
       context.emit('update:selected', title);
     };
-    return {defaults, titles, current, select};
+    return {defaults, titles, current, select, navItems, indicator};
   }
 };
 </script>
