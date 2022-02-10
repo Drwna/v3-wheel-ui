@@ -1,13 +1,26 @@
 <template>
-  <div class="topnavAndBanner">
-    <Topnav/>
-    <div class="banner">
-      <h1>Wheel UI</h1>
-      <h2>一个厉害的 UI 框架</h2>
-      <p class="actions">
-        <a href="https://github.com/Drwna">GitHub</a>
-        <router-link to="/doc">开始</router-link>
-      </p>
+  <div>
+    <div class="topnavAndBanner">
+      <Topnav/>
+      <div class="banner">
+        <h1>Wheel UI</h1>
+        <h2>一个厉害的 UI 框架</h2>
+        <p class="actions">
+          <a href="https://github.com/Drwna">GitHub</a>
+          <router-link to="/doc">开始</router-link>
+        </p>
+      </div>
+    </div>
+    <div class="features">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-vue"></use>
+      </svg>
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-ts"></use>
+      </svg>
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-light"></use>
+      </svg>
     </div>
   </div>
 </template>
@@ -26,6 +39,13 @@ $border-radius: 4px;
 .topnavAndBanner {
   //background: radial-gradient(circle, rgba(250, 249, 255, 1) 0%, rgba(226, 239, 247, 1) 100%);
   background: linear-gradient(330deg, rgba(205, 227, 241, 1) 0%, rgba(250, 249, 255, 1) 47%, rgba(220, 247, 247, 1) 100%);
+}
+
+.features {
+  > svg {
+    height: 64px;
+    width: 64px;
+  }
 }
 
 .banner {
