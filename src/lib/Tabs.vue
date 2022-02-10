@@ -20,7 +20,7 @@
 
 <script lang="ts">
 import Tab from '../lib/Tab.vue';
-import {computed, ref, watchEffect} from 'vue';
+import {ref, watchEffect} from 'vue';
 
 export default {
   props: {
@@ -51,18 +51,14 @@ export default {
         throw new Error('Tabs 子标签必须是 Tab');
       }
     });
-    const current = computed(() => {
-      return defaults.filter((tag) => {
-        return tag.props.title === props.selected;
-      })[0];
-    });
+
     const titles = defaults.map((tag) => {
       return tag.props.title;
     });
     const select = (title: string) => {
       context.emit('update:selected', title);
     };
-    return {defaults, titles, current, select, selectedItem, indicator, container};
+    return {defaults, titles, select, selectedItem, indicator, container};
   }
 };
 </script>
