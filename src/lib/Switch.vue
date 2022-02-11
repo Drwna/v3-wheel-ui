@@ -1,8 +1,8 @@
 <template>
   <button
-    class="wheel-switch"
-    @click="toggle"
-    :class="{ 'wheel-checked': value }"
+      class="wheel-switch"
+      @click="toggle"
+      :class="{ 'wheel-checked': value }"
   >
     <span></span>
   </button>
@@ -15,14 +15,14 @@ export default {
   },
   setup(props, context) {
     const toggle = () => {
-      context.emit("update:value", !props.value);
+      context.emit('update:value', !props.value);
     };
-    return { toggle };
+    return {toggle};
   },
 };
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 $h: 22px;
 $h2: $h - 4px;
 .wheel-switch {
@@ -32,6 +32,9 @@ $h2: $h - 4px;
   background: grey;
   border-radius: $h/2;
   position: relative;
+  &[disabled] {
+    background: #b9b5b5;
+  }
   > span {
     position: absolute;
     top: 2px;
