@@ -21,9 +21,8 @@ import {computed, ref} from 'vue';
 
 export default {
   components: {Button},
-  props: {
-    component: Object
-  },
+  props: { component: Object },
+
   setup(props) {
     const html = computed(() => {
       //@ts-ignore
@@ -33,10 +32,8 @@ export default {
     const codeVisible = ref(false);
     return {codeVisible, toggleCode, html};
   }
-
 };
 </script>
-
 
 <style lang="scss" scoped>
 $border-color: #d9d9d9;
