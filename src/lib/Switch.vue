@@ -23,6 +23,8 @@ export default {
 </script>
 
 <style lang="scss">
+@use "sass:math";
+
 $h: 22px;
 $h2: $h - 4px;
 .wheel-switch {
@@ -30,7 +32,7 @@ $h2: $h - 4px;
   width: $h * 2;
   border: none;
   background: grey;
-  border-radius: $h/2;
+  border-radius: math.div($h, 2);
   position: relative;
   &[disabled] {
     background: #b9b5b5;
@@ -42,7 +44,7 @@ $h2: $h - 4px;
     height: $h2;
     width: $h2;
     background: white;
-    border-radius: $h2 / 2;
+    border-radius: math.div($h, 2);
     transition: left 250ms;
   }
   &.wheel-checked {
