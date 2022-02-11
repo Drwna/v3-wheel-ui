@@ -7,21 +7,14 @@
 </template>
 
 <script lang="ts">
-import Button from '../lib/Button.vue';
-import {ref} from 'vue';
 import Switch1Demo from './Switch1Demo.vue';
 import Switch2Demo from './Switch2Demo.vue';
-import Prism from 'prismjs';
 import '../../node_modules/prismjs/themes/prism.min.css';
 import Demo from './Demo.vue';
 
 export default {
-  components: {Demo, Button},
-
-  setup() {
-    const bool = ref(false);
-    return {bool, Switch1Demo, Switch2Demo, Prism};
-  }
+  components: {Demo},
+  setup() { return {Switch1Demo, Switch2Demo}; }
 };
 </script>
 
