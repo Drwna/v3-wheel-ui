@@ -9,10 +9,7 @@ import Tabs1Demo from './Tabs1.demo.vue';
 
 export default {
   components: {Demo, Tabs1Demo},
-  setup() {
-    return {Demo, Tabs1Demo};
-  }
-
+  setup() { return {Demo, Tabs1Demo}; }
 };
 
 </script>
