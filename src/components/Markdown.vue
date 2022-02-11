@@ -23,4 +23,6 @@ export default {
   }
 };
 </script>
-
+<style lang="scss" scoped>
+.markdown-body { background: #f4f5f7; }
+</style>

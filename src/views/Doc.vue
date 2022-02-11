@@ -85,11 +85,8 @@ $aside-index: 10;
 }
 
 aside {
-  //background: #e0e2e1;
-  //background: #fffdf5;
-  //background: lightblue;
-  //background: #e0edf7;
-  background: radial-gradient(circle, rgb(250, 249, 255) 0%, rgb(204 228 243) 100%);
+  background: linear-gradient(90deg,
+      rgba(212, 235, 249, 1) 0%, rgba(186, 244, 244, 1) 100%);
   position: fixed;
   top: 0;
   left: 0;
@@ -117,7 +114,7 @@ aside {
         }
       }
       .router-link-active {
-        background: white;
+        background: #f4f5f7;
       }
     }
   }
