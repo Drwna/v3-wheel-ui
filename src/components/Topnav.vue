@@ -37,6 +37,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$topnav-index: 12;
 .topnav {
   color: #209468;
   display: flex;
@@ -45,9 +46,12 @@ export default {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: $topnav-index;
   justify-content: center;
   align-content: center;
+  @media (max-width: 500px) {
+    background: linear-gradient(330deg, rgba(205, 227, 241, 1) 0%, rgba(250, 249, 255, 1) 47%, rgba(220, 247, 247, 1) 100%);
+  }
   > .logo {
     max-width: 6em;
     margin-right: auto;
