@@ -29,6 +29,9 @@
           <li>
             <router-link to="/doc/tabs">Tabs 组件</router-link>
           </li>
+          <li>
+            <a>未完待续...</a>
+          </li>
         </ol>
       </aside>
       <main>
@@ -82,24 +85,35 @@ $aside-index: 10;
 }
 
 aside {
-  background: lightblue;
-  width: 150px;
+  background: #e0e2e1;
+  //background: lightblue;
+  //background: #e0edf7;
+  width: 250px;
   position: fixed;
   top: 0;
   left: 0;
-  padding-top: 100px;
+  padding-top: 80px;
   height: 100%;
   z-index: $aside-index;
+  @media (max-width: 500px) {
+    width: 150px;
+  }
   > h2 {
     margin-bottom: 4px;
-    padding: 0 16px;
+    padding: 4px 56px;
+    @media (max-width: 500px) {
+      padding: 0 16px;
+    }
   }
   > ol {
     > li {
       > a {
         display: block;
-        padding: 4px 16px;
+        padding: 14px 56px;
         text-decoration: none;
+        @media(max-width: 500px) {
+          padding: 10px 16px;
+        }
       }
       .router-link-active {
         background: white;
@@ -109,6 +123,10 @@ aside {
 }
 
 main {
+  margin-left: 96px;
   overflow: auto;
+  @media (max-width: 500px) {
+    margin: 0 auto;
+  }
 }
 </style>
