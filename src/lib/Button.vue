@@ -1,24 +1,25 @@
 <template>
   <button class="wheel-button" :class="classes" :disabled="disabled">
     <span v-if="loading" class="wheel-loadingIndicator"></span>
-    <slot />
+    <slot/>
   </button>
 </template>
 <script lang="ts">
-import { computed } from "vue";
+import {computed} from 'vue';
+
 export default {
   props: {
     theme: {
       type: String,
-      default: "button",
+      default: 'button',
     },
     size: {
       type: String,
-      default: "normal",
+      default: 'normal',
     },
     level: {
       type: String,
-      default: "normal",
+      default: 'normal',
     },
     disabled: {
       type: Boolean,
@@ -30,7 +31,7 @@ export default {
     },
   },
   setup(props) {
-    const { theme, size, level } = props;
+    const {theme, size, level} = props;
     const classes = computed(() => {
       return {
         [`wheel-theme-${theme}`]: theme,
@@ -38,7 +39,7 @@ export default {
         [`wheel-level-${level}`]: level,
       };
     });
-    return { classes };
+    return {classes};
   },
 };
 </script>
@@ -182,6 +183,7 @@ $grey: grey;
     animation: wheel-spin 1s infinite linear;
   }
 }
+
 @keyframes wheel-spin {
   0% {
     transform: rotate(0deg);
