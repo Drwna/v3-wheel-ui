@@ -102,15 +102,19 @@ $border-radius: 4px;
   }
 }
 
-
 .banner {
   color: #209468;
-  padding: 100px 0;
+  padding: 80px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media (min-width: 800px) {
+    > h1 { margin-top: 20px; }
+    > h2 { margin-top: 20px; }
+  }
   > .actions {
+    margin-top: 20px;
     padding: 8px 0;
     a {
       margin: 0 8px;

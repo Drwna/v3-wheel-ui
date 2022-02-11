@@ -85,10 +85,11 @@ $aside-index: 10;
 }
 
 aside {
-  background: #e0e2e1;
+  //background: #e0e2e1;
+  //background: #fffdf5;
   //background: lightblue;
   //background: #e0edf7;
-  width: 250px;
+  background: radial-gradient(circle, rgb(250, 249, 255) 0%, rgb(204 228 243) 100%);
   position: fixed;
   top: 0;
   left: 0;

@@ -49,11 +49,9 @@ $topnav-index: 12;
   z-index: $topnav-index;
   justify-content: center;
   align-content: center;
-  @media (max-width: 500px) {
-    background: linear-gradient(330deg, rgba(205, 227, 241, 1) 0%, rgba(250, 249, 255, 1) 47%, rgba(220, 247, 247, 1) 100%);
-  }
   > .logo {
     max-width: 6em;
+    margin-left: 72px;
     margin-right: auto;
     > svg {
       width: 32px;
@@ -65,7 +63,7 @@ $topnav-index: 12;
     white-space: nowrap;
     flex-wrap: nowrap;
     > li {
-      margin: 0 1em;
+      margin: auto 72px auto;
     }
   }
   > .toggleAside {
