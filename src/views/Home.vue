@@ -4,9 +4,9 @@
       <Topnav/>
       <div class="banner">
         <h1>Wheel UI</h1>
-        <h2>一个普通到不能再普通的 UI 框架</h2>
+        <h2>一个普通但值得学习的 UI 框架</h2>
         <p class="actions">
-          <a href="https://github.com/Drwna">GitHub</a>
+          <a href="https://github.com/Drwna/v3-wheel-ui">GitHub</a>
           <router-link to="/doc">开始</router-link>
         </p>
       </div>
