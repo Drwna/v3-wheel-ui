@@ -3,7 +3,7 @@ import "./lib/wheel.scss";
 import App from "./App.vue";
 import { createApp } from "vue";
 import { router } from "./router";
-import 'github-markdown-css/github-markdown-light.css';
+import 'github-markdown-css';
 
 const app = createApp(App);
 app.use(router);
