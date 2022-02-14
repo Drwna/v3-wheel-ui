@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts">
-import Dialog from '../lib/Dialog.vue';
+import {Dialog} from '../lib/index';
 import Demo from './Demo.vue';
 import Dialog1Demo from './Dialog1.demo.vue';
 import Dialog2Demo from './Dialog2.demo.vue';
