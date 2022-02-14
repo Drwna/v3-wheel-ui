@@ -38,8 +38,8 @@ export default {
         const {left: left2} = selectedItem.value.getBoundingClientRect();
         const left = left2 - left1;
         indicator.value.style.left = left + 'px';
-      });
-    });
+      }, {flush: 'post'});
+    },);
     // 只在第一次渲染执行
     // onMounted(x);
     // onUpdated(x);
