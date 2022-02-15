@@ -3,13 +3,13 @@
 打开终端运行下列命令：
 
 ```
-yarn add wheel-ui
+yarn add whl-ui
 ```
 
 或
 
 ```
-npm install wheel-ui
+npm install whl-ui
 ```
 
 下一节：[开始使用](#/doc/get-started)
