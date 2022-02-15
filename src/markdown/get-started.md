@@ -6,7 +6,7 @@
 
 ```
 import {Button, Tabs, Tab, Switch, Dialog, openDialog} from "whl-ui"
-import 'whl-ui/dist/lib/whl.css';
+import "whl-ui/dist/lib/whl.css";
 ```
 
 就可以使用我提供的组件了。
