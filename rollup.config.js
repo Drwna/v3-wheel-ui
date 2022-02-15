@@ -10,8 +10,8 @@ export default {
         globals: {
             vue: 'Vue'
         },
-        name: 'wheel',
-        file: 'dist/lib/wheel.js',
+        name: 'whl',
+        file: 'dist/lib/whl.js',
         format: 'umd',
         plugins: [terser()]
     },

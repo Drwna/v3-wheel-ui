@@ -1,6 +1,10 @@
 {
-  "name": "wheel-ui",
-  "version": "0.0.0",
+  "name": "whl-ui",
+  "version": "0.0.2",
+  "files": [
+    "dist/lib/*"
+  ],
+  "main": "dist/lib/whl.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
@@ -16,6 +20,7 @@
     "vue-router": "4.0.0-beta.3"
   },
   "devDependencies": {
+    "@types/prismjs": "^1.26.0",
     "@vue/compiler-sfc": "3.0.0-rc.1",
     "rollup-plugin-esbuild": "2.5.0",
     "rollup-plugin-scss": "2.6.0",
