@@ -9,7 +9,7 @@
 <script lang="ts">
 import Switch1Demo from './Switch1Demo.vue';
 import Switch2Demo from './Switch2Demo.vue';
-import '../../node_modules/prismjs/themes/prism.min.css';
+import '../../node_modules/prismjs/themes/prism.css';
 import Demo from './Demo.vue';
 
 export default {
