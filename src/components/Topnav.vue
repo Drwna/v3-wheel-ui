@@ -53,18 +53,13 @@ $topnav-index: 12;
     max-width: 6em;
     margin-left: 72px;
     margin-right: auto;
-    > svg {
-      width: 32px;
-      height: 32px;
-    }
+    > svg { width: 32px; height: 32px; }
   }
   > .menu {
     display: flex;
     white-space: nowrap;
     flex-wrap: nowrap;
-    > li {
-      margin: auto 72px auto;
-    }
+    > li { margin: auto 72px auto; }
   }
   > .toggleAside {
     width: 32px;
@@ -76,15 +71,9 @@ $topnav-index: 12;
     display: none;
   }
   @media (max-width: 500px) {
-    > .menu {
-      display: none;
-    }
-    > .logo {
-      margin: 0 auto;
-    }
-    > .toggleAside {
-      display: inline-block;
-    }
+    > .menu { display: none; }
+    > .logo { margin: 0 auto; }
+    > .toggleAside { display: inline-block; }
   }
 }
 </style>

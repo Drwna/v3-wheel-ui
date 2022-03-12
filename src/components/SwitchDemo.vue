@@ -23,9 +23,7 @@ $border-color: #d9d9d9;
 
 .demo {
   margin: 16px 0 32px;
-  &-component {
-    padding: 16px;
-  }
+  &-component { padding: 16px; }
   &-actions {
     padding: 8px 16px;
     border-top: 1px dashed $border-color;

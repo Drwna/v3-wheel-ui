@@ -60,28 +60,18 @@ $aside-index: 10;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  > .nav {
-    flex-shrink: 0;
-  }
+  > .nav { flex-shrink: 0; }
   > .content {
     flex-grow: 1;
     padding-top: 60px;
     padding-left: 156px;
-    @media (max-width: 500px) {
-      padding-left: 0;
-    }
+    @media (max-width: 500px) { padding-left: 0; }
   }
 }
 
-.content {
-  display: flex;
-  > aside {
-    flex-shrink: 0;
-  }
-  > main {
-    flex-grow: 1;
-    padding: 16px;
-  }
+.content { display: flex;
+  > aside { flex-shrink: 0; }
+  > main { flex-grow: 1; padding: 16px; }
 }
 
 aside {
@@ -93,38 +83,24 @@ aside {
   padding-top: 80px;
   height: 100%;
   z-index: $aside-index;
-  @media (max-width: 500px) {
-    width: 150px;
-  }
+  @media (max-width: 500px) { width: 150px; }
   > h2 {
     margin-bottom: 4px;
     padding: 4px 56px;
-    @media (max-width: 500px) {
-      padding: 0 16px;
-    }
+    @media (max-width: 500px) { padding: 0 16px; }
   }
   > ol {
     > li {
-      > a {
-        display: block;
-        padding: 14px 56px;
+      > a { display: block; padding: 14px 56px;
         text-decoration: none;
-        @media(max-width: 500px) {
-          padding: 10px 16px;
-        }
+        @media(max-width: 500px) { padding: 10px 16px; }
       }
-      .router-link-active {
-        background: #f4f5f7;
-      }
+      .router-link-active { background: #f4f5f7; }
     }
   }
 }
 
-main {
-  margin-left: 96px;
-  overflow: auto;
-  @media (max-width: 500px) {
-    margin: 0 auto;
-  }
+main { margin-left: 96px; overflow: auto;
+  @media (max-width: 500px) { margin: 0 auto; }
 }
 </style>

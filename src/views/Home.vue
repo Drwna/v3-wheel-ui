@@ -51,30 +51,18 @@ export default {
 $green: #53bd95;
 $border-radius: 4px;
 .topnavAndBanner {
-  //background: radial-gradient(circle, rgba(250, 249, 255, 1) 0%, rgba(226, 239, 247, 1) 100%);
-  background: linear-gradient(330deg, rgba(205, 227, 241, 1) 0%, rgba(250, 249, 255, 1) 47%, rgba(220, 247, 247, 1) 100%);
-  //border-bottom-left-radius: 50% 40px;
-  //border-bottom-right-radius: 50% 40px;
+  background: linear-gradient(330deg, rgba(205, 227, 241, 1) 0%,
+      rgba(250, 249, 255, 1) 47%, rgba(220, 247, 247, 1) 100%);
   clip-path: ellipse(80% 60% at 50% 40%);
 }
 
-.features {
-  margin: 64px auto;
-  width: 400px;
-  @media (max-width: 500px) {
-    width: 100%;
-    margin: auto;
+.features { margin: 64px auto; width: 400px;
+  @media (max-width: 500px) { width: 100%; margin: auto;
     transform: scale(0.75);
   }
-  @media (min-width: 800px) {
-    width: 800px;
-  }
-  @media (min-width: 1200px) {
-    width: 1200px;
-  }
-  > ul {
-    display: flex;
-    flex-wrap: wrap;
+  @media (min-width: 800px) { width: 800px; }
+  @media (min-width: 1200px) { width: 1200px; }
+  > ul { display: flex; flex-wrap: wrap;
     > li {
       width: 400px;
       margin: 16px 0;
@@ -86,18 +74,9 @@ $border-radius: 4px;
         "icon text";
       grid-template-columns: 80px auto;
       grid-template-rows: 1fr auto;
-      > svg {
-        grid-area: icon;
-        width: 64px;
-        height: 64px;
-      }
-      > h3 {
-        grid-area: title;
-        font-size: 28px;
-      }
-      > p {
-        grid-area: text
-      }
+      > svg { grid-area: icon; width: 64px; height: 64px; }
+      > h3 { grid-area: title; font-size: 28px; }
+      > p { grid-area: text }
     }
   }
 }
@@ -113,9 +92,7 @@ $border-radius: 4px;
     > h1 { margin-top: 20px; }
     > h2 { margin-top: 20px; }
   }
-  > .actions {
-    margin-top: 20px;
-    padding: 8px 0;
+  > .actions { margin-top: 20px; padding: 8px 0;
     a {
       margin: 0 8px;
       background: $green;
@@ -123,9 +100,7 @@ $border-radius: 4px;
       display: inline-block;
       padding: 8px 24px;
       border-radius: $border-radius;
-      &:hover {
-        text-decoration: none;
-      }
+      &:hover { text-decoration: none; }
     }
   }
 }

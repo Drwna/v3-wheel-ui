@@ -78,12 +78,8 @@ $border-color: #d9d9d9;
       padding: 8px 0;
       margin: 0 16px;
       cursor: pointer;
-      &:first-child {
-        margin-left: 0;
-      }
-      &.selected {
-        color: $blue;
-      }
+      &:first-child { margin-left: 0; }
+      &.selected { color: $blue; }
     }
     &-indicator {
       position: absolute;
@@ -95,8 +91,6 @@ $border-color: #d9d9d9;
       transition: all 250ms;
     }
   }
-  &-content {
-    padding: 8px 0;
-  }
+  &-content { padding: 8px 0; }
 }
 </style>
