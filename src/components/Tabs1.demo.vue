@@ -2,10 +2,10 @@
 
 <template>
   <Tabs v-model:selected="x">
-    <Tab title="导航1">内容1</Tab>
-    <Tab title="导航2">内容2</Tab>
-    <Tab title="导航3">内容3</Tab>
-    <Tab title="导航4">内容4</Tab>
+    <Tab title="nav1">内容1</Tab>
+    <Tab title="nav2">内容2</Tab>
+    <Tab title="nav3">内容3</Tab>
+    <Tab title="nav4">内容4</Tab>
   </Tabs>
 </template>
 
@@ -17,7 +17,7 @@ import {ref} from 'vue';
 export default {
   components: {Tabs, Tab},
   setup() {
-    const x = ref('导航2');
+    const x = ref('nav2');
     return {x};
   }
 };

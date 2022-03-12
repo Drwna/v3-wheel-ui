@@ -8,12 +8,11 @@
 
 <script lang="ts">
 import {Button} from '../lib/index';
-import {ref, h} from 'vue';
-import {openDialog} from '../lib/index';
+import {h} from 'vue';
+import {openDialog} from '../lib';
 
 export default {
   components: {Button},
-
   setup() {
     const showDialog = () => {
       openDialog({
@@ -23,9 +22,7 @@ export default {
         cancel() { console.log('cancel'); }
       });
     };
-    return {
-      showDialog
-    };
+    return {showDialog};
   }
 };
 </script>

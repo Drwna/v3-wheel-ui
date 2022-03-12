@@ -10,9 +10,7 @@
 
 <script lang="ts">
 export default {
-  props: {
-    value: Boolean,
-  },
+  props: {value: Boolean,},
   setup(props, context) {
     const toggle = () => {
       context.emit('update:value', !props.value);
