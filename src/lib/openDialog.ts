@@ -18,7 +18,7 @@ export const openDialog = (options) => {
         'onUpdate:visible': (newVisible) => {if (newVisible === false) close(); },
         ok,
         cancel
-      }, {title, content});
+      }, {title: () => title, content: () => content});
     }
   });
   app.mount(div);
